@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+RTSP Video Streaming App with Custom Overlays
+This project provides a full-stack solution for streaming RTSP video and managing custom overlays using Python (Flask), React, and MongoDB.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Getting Started
+This project was bootstrapped with Create React App.
 
-## Available Scripts
+Prerequisites
+Ensure you have the following installed:
 
-In the project directory, you can run:
+Node.js: Install Node.js
+MongoDB: MongoDB Installation Guide
+Python (with Flask): Flask Installation Guide
+Setup
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/gangeswaran/RTSP_fullStack
+cd RTSP_fullStack
+Install frontend dependencies:
+bash
+Copy code
+cd frontend
+npm install
+Install backend dependencies:
+bash
+Copy code
+cd backend
+pip install -r requirements.txt
+Start the MongoDB server:
+Ensure your MongoDB server is running locally or remotely.
 
-### `npm start`
+Run the backend server:
+bash
+Copy code
+cd backend
+flask run
+Run the frontend app:
+bash
+Copy code
+cd frontend
+npm start
+Open http://localhost:3000 to view the app in the browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Features
+RTSP Stream: View live video streams using RTSP.
+Overlay Management: Add, edit, delete custom overlays (texts, images) on the video stream.
+CRUD Operations: Fully functional API to manage overlays.
+Available Scripts (Frontend)
+In the frontend directory, you can run the following commands:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm start
+Runs the app in development mode at http://localhost:3000.
+The page will automatically reload when you make changes.
 
-### `npm test`
+npm run build
+Builds the app for production, optimizing the build for best performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm run eject
+Ejects the project configuration to allow deeper customization. Use this carefully as it’s a one-way operation.
 
-### `npm run build`
+Overlay Management API
+The app provides a CRUD API for managing overlays. Here’s a brief on the API endpoints:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+GET /overlays: Retrieve all overlays.
+POST /overlays: Create a new overlay.
+PUT /overlays/
+: Update an existing overlay.
+DELETE /overlays/
+: Delete an overlay.
+For more details, refer to the API documentation in the project.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Input RTSP URL
+When you launch the app, you'll be prompted to enter an RTSP URL to stream video from. The URL should be in the format:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+php
+Copy code
+rtsp://<username>:<password>@<camera-ip>:<port>/<stream-path>
+Customizing Overlays
+You can position and manage overlays directly through the UI. Each overlay can be customized with text, images, and its position on the video stream.
 
-### `npm run eject`
+Learn More
+For detailed documentation, you can refer to the following resources:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Create React App Documentation
+Flask Documentation
+MongoDB Documentation
+This README provides a more detailed description of how to set up and use the RTSP video streaming app. Feel free to adjust it based on additional requirements or features.
