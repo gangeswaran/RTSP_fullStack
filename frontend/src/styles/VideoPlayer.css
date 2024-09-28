@@ -1,0 +1,94 @@
+.video-player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e; /* Dark background for video player */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: auto;
+}
+
+.video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    outline: none;
+}
+
+.controls {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Make the controls span the full width */
+}
+
+.play-pause-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.play-pause-button:hover {
+    background-color: #0056b3;
+}
+
+.play-pause-button.active {
+    background-color: #dc3545; /* Active color for Pause button */
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+}
+
+.volume-label {
+    color: white;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.volume-slider {
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Additional styles for the slider */
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.volume-slider::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+}
